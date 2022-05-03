@@ -18,10 +18,9 @@ COPY . /usr/src/app
 RUN yarn add --dev eslint
 RUN yarn build
 
-RUN yarn prisma migrate deploy
-
-
 
 EXPOSE 3000
 
 CMD [ "yarn", "start" ]
+
+RUN yarn prisma migrate deploy
