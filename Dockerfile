@@ -11,14 +11,15 @@ COPY package.json /usr/src/app
 COPY yarn.lock /usr/src/app
 COPY schema.prisma /usr/src/app
 
-RUN yarn prisma migrate deploy
-
 RUN yarn --production
 
 COPY . /usr/src/app
 
 RUN yarn add --dev eslint
 RUN yarn build
+
+RUN yarn prisma migrate deploy
+
 
 
 EXPOSE 3000
