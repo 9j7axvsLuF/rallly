@@ -1,7 +1,7 @@
 FROM node:alpine
 
 RUN mkdir -p /usr/src/app
-ENV PORT 3000
+ENV PORT 3001
 ARG DATABASE_URL
 ENV DATABASE_URL $DATABASE_URL
 
